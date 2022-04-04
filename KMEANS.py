@@ -8,7 +8,12 @@ X = np.array([[1, 2],
               [5, 8 ],
               [8, 8],
               [1, 0.6],
-              [9,11]])
+              [8,1],
+              [4,5],
+              [2,10],
+              [6,1.7],
+              [1,11],
+              [9,20]])
 
 class K_Means:
     def __init__(self, k=2, tol=0.001, max_iter=300):
@@ -60,7 +65,7 @@ class K_Means:
 model = K_Means()
 model.fit(X)
 
-colors = 10*["g", "r", "b", "c", "k"]
+colors = 10*["b", "c", "m", "m", "c"]
 
 for centroid in model.centroids:
     plt.scatter(model.centroids[centroid][0], model.centroids[centroid][1],
